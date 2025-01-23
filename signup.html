@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SociallyCurrent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-blue: #1e40af;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .signup-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--primary-blue);
+            font-size: 32px;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .description {
+            color: #64748b;
+            margin-bottom: 2rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+            font-weight: 500;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .other-input {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        button {
+            background: var(--primary-blue);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            width: 100%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: var(--secondary-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Join the SociallyCurrent Pre-Launch List!</h1>
+        <p class="description">
+            Be among the first to access the ultimate influencer marketing platform designed to revolutionize how influencers and businesses connect. Our AI-powered tools match you with perfect campaigns, customizable profiles showcase your brand, and secure communication keeps your partnerships seamless. Plus, with integrated project management, you'll save time and maximize your results. Don't miss out—reserve your spot today and stay ahead of the curve!
+        </p>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="userType">I am a...</label>
+                <select id="userType" required>
+                    <option value="">Select an option</option>
+                    <option value="influencer">Influencer/Athlete</option>
+                    <option value="business">Business/Organization</option>
+                    <option value="other">Other</option>
+                </select>
+                <div id="otherInput" class="other-input">
+                    <input type="text" placeholder="Please specify">
+                </div>
+            </div>
+            <button type="submit">Join the Waitlist</button>
+        </form>
+    </div>
+
+    <script>
+        const userType = document.getElementById('userType');
+        const otherInput = document.getElementById('otherInput');
+
+        userType.addEventListener('change', function() {
+            otherInput.style.display = this.value === 'other' ? 'block' : 'none';
+        });
+
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thanks for signing up! We\'ll be in touch soon.');
+        });
+    </script>
+</body>
+</html>
