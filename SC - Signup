@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SociallyCurrent - Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .logo {
+            color: #2563eb;
+            font-size: 24px;
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        .signup-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .signup-btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .influencer-btn {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .business-btn {
+            background-color: white;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .signup-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+        }
+
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 2rem;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">SociallyCurrent</div>
+        <p class="subtitle">Choose how you want to join our platform</p>
+        <div class="signup-buttons">
+            <button class="signup-btn influencer-btn">
+                Sign up as Influencer/NIL Athlete
+            </button>
+            <button class="signup-btn business-btn">
+                Sign up as Business/Organization
+            </button>
+        </div>
+    </div>
+</body>
+</html>
